@@ -43,5 +43,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--memory", MEMORY]
     vb.customize ["modifyvm", :id, "--cpus",   PROCS]
   end
+  config.vm.provision :shell, path: './scripts/slowdns.sh', keep_color: true
   config.vm.provision :shell, path: './scripts/upstart.sh', keep_color: true
 end
