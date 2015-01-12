@@ -21,13 +21,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.hostname = 'hokkaidoken'
 
-  config.vm.network :forwarded_port, guest: 22, host: 2222, id: "ssh", disabled: true
+  config.vm.network :forwarded_port, guest: 22, host: 2227, id: "ssh", disabled: true
   config.vm.network :forwarded_port, guest: 22, host: 2080, auto_correct: true
   config.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true
   config.vm.network :public_network, bridge: 'en1: Wi-Fi (AirPort)'
 
   config.vm.provider :virtualbox do |vb, override|
-#    vb.gui = true
+    vb.gui = true
 
     vb.customize ["modifyvm", :id, "--ioapic", "on"]
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
