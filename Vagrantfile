@@ -1,5 +1,10 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+# Ubuntu 14.04 HipHop VM base box
+
+# CPR : Jd Daniel :: Ehime-ken
+# MOD : 2015-01-12 @ 15:51:07
+# VER : Version 1
 
 VAGRANTFILE_API_VERSION = "2"
 VAGRANT_REQUIRED_VERSION = "1.2.0"
@@ -27,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :public_network, bridge: 'en1: Wi-Fi (AirPort)'
 
   config.vm.provider :virtualbox do |vb, override|
-    vb.gui = true
+    vb.gui = true ## comment out to shush the VBox startup...
 
     vb.customize ["modifyvm", :id, "--ioapic", "on"]
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
