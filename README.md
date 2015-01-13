@@ -1,5 +1,5 @@
-Trusty64 Vagrant box with HHVM Latest Installer
-===============================================
+Vagrant Trusty64 with HHVM Latest Installer
+===========================================
 
 To run just do the following.
 
