@@ -1,5 +1,5 @@
-Vagrant Trusty64 with HHVM Latest Installer
-===========================================
+Vagrant Trusty64 with HHVM Latest
+=================================
 
 To run just do the following.
 
