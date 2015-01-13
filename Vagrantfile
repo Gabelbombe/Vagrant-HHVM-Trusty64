@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :public_network, bridge: 'en1: Wi-Fi (AirPort)'
 
   config.vm.provider :virtualbox do |vb, override|
-    vb.gui = true ## comment out to shush the VBox startup...
+    # vb.gui = true ## comment out to shush the VBox startup...
 
     vb.customize ["modifyvm", :id, "--ioapic", "on"]
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
@@ -43,6 +43,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--memory", MEMORY]
     vb.customize ["modifyvm", :id, "--cpus",   PROCS]
   end
-  config.vm.provision :shell, path: './scripts/slowdns.sh', keep_color: true
+#  config.vm.provision :shell, path: './scripts/slowdns.sh', keep_color: true
   config.vm.provision :shell, path: './scripts/upstart.sh', keep_color: true
 end
