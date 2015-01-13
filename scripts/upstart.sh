@@ -26,4 +26,4 @@ sudo apt-get update
 sudo apt-get install -y hhvm
 
 echo "==> Reenabling Firewall"
-sudo ufw enable
+sudo ufw --force enable

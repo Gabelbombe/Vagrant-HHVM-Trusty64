@@ -11,6 +11,10 @@ VBoxManage list runningvms |awk '{print $2;}' |xargs -I vmid VBoxManage controlv
 vagrant global-status --prune
 
 ## continually destroys applicances until carriage...
+echo "==> Nuking the following boxes..."
+
+vagrant global-status; sleep 3
+
 while read appliance; do
   [ ! -z "$appliance" ] && {
     vagrant destroy --force $(echo $appliance |awk '{print$1}')
