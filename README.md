@@ -7,7 +7,6 @@ To run just do the following.
  - $ vagrant up
  - $ vagrant ssh
 
-
 If there are remnant VM's in your space, you might need to destroy
 your devices and reload with `vagrant reload --provision` which will
 set you up with a new clean env.
