@@ -5,9 +5,6 @@
 # MOD : 2015-01-12 @ 14:28:11
 # VER : Version 2
 
-echo "==> Disabling Firewall..."
-sudo ufw disable
-
 echo "==> Updating..."
 sudo apt-get -y update
 sudo apt-get -y upgrade
@@ -24,6 +21,3 @@ sudo apt-get install software-properties-common
 sudo add-apt-repository 'deb http://dl.hhvm.com/ubuntu trusty main'
 sudo apt-get update
 sudo apt-get install -y hhvm
-
-echo "==> Reenabling Firewall"
-sudo ufw --force enable
