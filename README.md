@@ -3,7 +3,8 @@ Vagrant HHVM Installer
 
 To run just do the following.
 
- - __$ git clone https://github.com/ehime/Vagrant.git && cd $_ __
+ - __$ git clone https://github.com/ehime/Vagrant-HHVM-Trusty64.git /tmp/trusty__
+ - __$ cd /tmp/trusty__
  - __$ vagrant up__
  - __$ vagrant ssh__
 
